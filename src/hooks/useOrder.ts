@@ -4,6 +4,7 @@ import type { MenuItem, OrderItem } from '../types';
 export const useOrder = () => {
 
     const [order, setOrder] = useState<OrderItem[]>([]);
+    const [tip, setTip] = useState(0)
 
     const addItem = (item: MenuItem) => {
         // Check if the item already exists in the order
@@ -26,6 +27,8 @@ export const useOrder = () => {
     return {
         addItem,
         order,
-        removeItem
+        removeItem,
+        tip,
+        setTip,
     }
 }
